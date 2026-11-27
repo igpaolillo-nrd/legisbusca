@@ -4,7 +4,9 @@ Prototipo académico del **Programa de Formación en Inteligencia Artificial Apl
 
 No es un sitio de la Legislatura de la Ciudad Autónoma de Buenos Aires. Consulta el registro público de expedientes y muestra, al lado, cómo un agente traduce una pregunta cotidiana a una búsqueda que ese registro puede responder.
 
-Repositorio: [github.com/igpaolillo-nrd/legisbusca](https://github.com/igpaolillo-nrd/legisbusca).
+Repositorio público: [github.com/igpaolillo-nrd/legisbusca](https://github.com/igpaolillo-nrd/legisbusca).
+
+Demo: [legisbusca.vercel.app](https://legisbusca.vercel.app). Funciona sin clave de modelo.
 
 ## El problema
 
@@ -146,7 +148,7 @@ npm run prueba:api
 `prueba:api` pega contra la app ya levantada. Para una instancia desplegada:
 
 ```bash
-BASE_URL=https://tu-instancia.vercel.app npm run prueba:api
+BASE_URL=https://legisbusca.vercel.app npm run prueba:api
 ```
 
 Esa prueba sí habla con el webservice de la Legislatura. Las de `npm test` no.
@@ -160,7 +162,7 @@ GEMINI_MODEL=gemini-2.0-flash
 
 ## Despliegue
 
-El proyecto es Next.js y se despliega en Vercel sin pasos extra. La región conveniente para hablar con el registro de Buenos Aires es la más cercana que ofrezca el plan; el código no depende de una región.
+El proyecto es Next.js y está publicado en [legisbusca.vercel.app](https://legisbusca.vercel.app), con las funciones en la región `gru1` (São Paulo), la más cercana a Buenos Aires que ofrece el plan. El código no depende de esa región.
 
 No hay secretos obligatorios. Si se carga `GEMINI_API_KEY`, se hace en las variables de entorno del proyecto, no en el repositorio.
 
